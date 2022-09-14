@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MangaKyuTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorLightGrey70</item>
+    </style>
+
+    <style name="MangaKyuTextStyle.SemiBold">
+        <item name="android:fontFamily">@font/jakarta_sans_semibold</item>
+    </style>
+
+    <style name="MangaKyuTextStyle.Bold">
+        <item name="android:fontFamily">@font/jakarta_sans_bold</item>
+    </style>
+    
+    <style name="MangaKyuTextStyle.SemiBold.Header3">
+        <item name="android:textSize">@dimen/dimen_16sp</item>
+    </style>
+
+    <style name="MangaKyuTextStyle.SemiBold.Header4">
+        <item name="android:textSize">@dimen/dimen_14sp</item>
+    </style>
+
+    <style name="MangaKyuTextStyle.SemiBold.Header3.LightGrey">
+        <item name="android:textColor">@color/colorLightGrey70</item>
+    </style>
+
+    <style name="MangaKyuTextStyle.Bold.Header2">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="MangaKyuTextStyle.Bold.Header3">
+        <item name="android:textSize">@dimen/dimen_16sp</item>
+    </style>
+
+    <style name="MangaKyuTextStyle.Body3">
+        <item name="android:textSize">@dimen/dimen_12sp</item>
+        <item name="android:textColor">@color/colorLightGrey70</item>
+    </style>
+
+    <style name="MangaKyuTextStyle.Body2">
+        <item name="android:textSize">@dimen/dimen_14sp</item>
+    </style>
+
+    <style name="MangaKyuTextStyle.SemiBold.Body2">
+        <item name="android:textSize">@dimen/dimen_14sp</item>
+    </style>
+
+    <style name="MangaKyuTextStyle.Body3.LightGrey70">
+        <item name="android:textColor">@color/colorLightGrey70</item>
+    </style>
+
+    <style name="MangaKyuTextStyle.Body3.LightGrey30">
+        <item name="android:textColor">@color/colorLightGrey30</item>
+    </style>
+
+</resources>

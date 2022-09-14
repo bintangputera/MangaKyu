@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dimen_8dp"
+    android:layout_marginTop="@dimen/dimen_16dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcvPoster"
+        android:layout_width="@dimen/dimen_100dp"
+        android:layout_height="@dimen/dimen_150dp"
+        app:cardCornerRadius="@dimen/dimen_8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgPoster"
+            tools:src="@drawable/img"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvMangaTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Jujutsu Kaisen"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mcvPoster"
+        style="@style/MangaKyuTextStyle.SemiBold.Header4"/>
+
+    <TextView
+        android:id="@+id/tvMangaGenre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Jujutsu Kaisen"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMangaTitle"
+        style="@style/MangaKyuTextStyle.Body3"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

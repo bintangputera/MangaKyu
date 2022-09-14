@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_8dp"
+    app:strokeColor="@color/colorLightGrey30"
+    app:cardBackgroundColor="@color/colorBlack70"
+    app:strokeWidth="1dp"
+    app:contentPaddingTop="@dimen/dimen_8dp"
+    app:contentPaddingBottom="@dimen/dimen_8dp"
+    app:contentPaddingLeft="@dimen/dimen_24dp"
+    app:contentPaddingRight="@dimen/dimen_24dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tvGenre"
+        tools:text="Action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        style="@style/MangaKyuTextStyle.Body3.LightGrey70"/>
+
+</com.google.android.material.card.MaterialCardView>

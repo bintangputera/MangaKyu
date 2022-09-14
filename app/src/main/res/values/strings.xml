@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MangaKyu</string>
+    <string name="label_new_release">New Release!</string>
+    <string name="label_read_the_recommendation">Read the latest recommendation</string>
+    <string name="label_show_more">Show More</string>
+    <string name="label_most_popular_comics">Most Popular Comics</string>
+    <string name="label_lots_interesting_comics">Lots of interesting comics here</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_manga">Manga</string>
+    <string name="menu_bookmark">Bookmark</string>
+    <string name="menu_favorite">Favorite</string>
+    <string name="label_synopsis">Synopsis</string>
+    <string name="label_read">Read</string>
+    <string name="action_read_now">Read Now</string>
+    <string name="label_genre">Genre</string>
+    <string name="label_complete_info">Complete Info</string>
+    <string name="label_title">Title</string>
+    <string name="label_author">Author</string>
+    <string name="label_chapter">Chapter</string>
+    <string name="label_volume">Volume</string>
+    <string name="label_release_soon">Release Soon</string>
+    <string name="label_keep_watching">Keep watching, wait for the latest manga</string>
+</resources>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvLabelNewRelease"
+            android:text="@string/label_new_release"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/MangaKyuTextStyle.SemiBold.Header3.LightGrey"/>
+
+        <TextView
+            android:id="@+id/tvLabelReadRecommendations"
+            style="@style/MangaKyuTextStyle.Body3.LightGrey70"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_read_the_recommendation"
+            app:layout_constraintStart_toStartOf="@id/tvLabelNewRelease"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelNewRelease" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSeeAll"
+            android:text="@string/label_show_more"
+            android:textColor="@color/white"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            app:icon="@drawable/ic_chevron_right"
+            app:iconGravity="end"
+            app:iconTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLabelReadRecommendations"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvLabelReadRecommendations"
+            style="@style/MangaKyuTextButtonStyle"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNewReleaseManga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            tools:listitem="@layout/item_manga_card_banner"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/btnSeeAll"/>
+
+        <TextView
+            android:id="@+id/tvLabelMostPopular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_most_popular_comics"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            app:layout_constraintStart_toStartOf="@+id/rvNewReleaseManga"
+            app:layout_constraintTop_toBottomOf="@+id/rvNewReleaseManga"
+            style="@style/MangaKyuTextStyle.SemiBold.Header3.LightGrey"/>
+
+        <TextView
+            android:id="@+id/tvLabelInterestingComic"
+            style="@style/MangaKyuTextStyle.Body3.LightGrey70"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_lots_interesting_comics"
+            app:layout_constraintStart_toStartOf="@+id/tvLabelMostPopular"
+            app:layout_constraintTop_toBottomOf="@+id/tvLabelMostPopular" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShowMorePopular"
+            android:text="@string/label_show_more"
+            style="@style/MangaKyuTextButtonStyle"
+            android:textColor="@color/white"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            app:icon="@drawable/ic_chevron_right"
+            app:iconGravity="end"
+            app:iconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tvLabelInterestingComic"
+            app:layout_constraintTop_toTopOf="@id/tvLabelInterestingComic"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPopularManga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
+            app:layout_constraintTop_toBottomOf="@id/btnShowMorePopular"
+            app:spanCount="3"
+            tools:itemCount="6"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/item_manga_grid" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBlack70"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginBottom="@dimen/dimen_16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvPopularManga">
+
+            <TextView
+                android:id="@+id/tvLabelReleaseSoon"
+                android:text="@string/label_release_soon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_16sp"
+                android:layout_marginTop="@dimen/dimen_16sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                style="@style/MangaKyuTextStyle.SemiBold.Header3.LightGrey"/>
+
+            <TextView
+                android:id="@+id/tvLabelKeepWatching"
+                android:text="@string/label_keep_watching"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tvLabelReleaseSoon"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelReleaseSoon"
+                style="@style/MangaKyuTextStyle.Body3.LightGrey70"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvUpcomingManga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:layout_marginBottom="@dimen/dimen_16dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvLabelKeepWatching"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelKeepWatching"
+                tools:listitem="@layout/item_manga_card" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

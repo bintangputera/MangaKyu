@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <Toolbar
+        android:id="@+id/toolbarDetail"
+        android:navigationIcon="@drawable/ic_arrow_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/footerContainer"
+        app:layout_constraintTop_toBottomOf="@id/toolbarDetail">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvPoster"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_150dp"
+                android:layout_marginVertical="@dimen/dimen_16dp"
+                android:layout_marginEnd="@dimen/dimen_16dp"
+                android:layout_marginStart="@dimen/dimen_16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeWidth="@dimen/dimen_4dp"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgPoster"
+                    android:layout_width="@dimen/dimen_100dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:src="@drawable/img" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvMangaTitle"
+                style="@style/MangaKyuTextStyle.Bold.Header2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:ellipsize="end"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/mcvPoster"
+                app:layout_constraintTop_toTopOf="@+id/mcvPoster"
+                tools:text="OVERLORD" />
+
+            <TextView
+                android:id="@+id/tvMangaAuthor"
+                style="@style/MangaKyuTextStyle.Body3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_4dp"
+                android:ellipsize="end"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/mcvPoster"
+                app:layout_constraintTop_toBottomOf="@+id/tvMangaTitle"
+                tools:text="by Maruyama Kugane" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvRating"
+                tools:text="7.9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_star"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                app:layout_constraintStart_toStartOf="@+id/tvMangaAuthor"
+                app:layout_constraintTop_toBottomOf="@id/tvMangaAuthor"
+                style="@style/MangaKyuTextStyle.Body3"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="@dimen/dimen_0dp"
+                android:text="@string/label_read"
+                android:textAllCaps="false"
+                android:textAppearance="@style/MangaKyuTextStyle.SemiBold.Body2"
+                app:backgroundTint="@color/colorLightBlue70"
+                app:layout_constraintBottom_toBottomOf="@id/mcvPoster"
+                app:layout_constraintStart_toStartOf="@+id/tvRating" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnExpand"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="@dimen/dimen_48dp"
+                android:layout_height="@dimen/dimen_48dp"
+                android:insetLeft="@dimen/dimen_0dp"
+                android:insetTop="@dimen/dimen_0dp"
+                android:insetRight="@dimen/dimen_0dp"
+                android:insetBottom="@dimen/dimen_0dp"
+                app:backgroundTint="@color/colorLightGrey70"
+                app:icon="@drawable/ic_arrow_down"
+                app:iconPadding="@dimen/dimen_0dp"
+                app:iconTint="@color/colorBlack90"
+                app:layout_constraintBottom_toBottomOf="@+id/mcvSynopsis"
+                app:layout_constraintEnd_toEndOf="@+id/mcvSynopsis"
+                app:layout_constraintStart_toStartOf="@+id/mcvSynopsis"
+                app:layout_constraintTop_toBottomOf="@+id/mcvSynopsis"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvSynopsis"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="@dimen/dimen_24dp"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                app:cardCornerRadius="@dimen/dimen_16dp"
+                app:contentPadding="@dimen/dimen_16dp"
+                app:cardBackgroundColor="@color/colorBlack70"
+                app:layout_constraintTop_toBottomOf="@+id/mcvPoster">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvLabelSynopsis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_synopsis"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        style="@style/MangaKyuTextStyle.Bold.Header3"/>
+
+                    <TextView
+                        android:id="@+id/tvSynopsis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/tvLabelSynopsis"
+                        style="@style/MangaKyuTextStyle.Body3.LightGrey70"
+                        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in odio ligula. Donec convallis orci sem, id efficitur lacus vestibulum vel. Fusce imperdiet urna tincidunt lacus feugiat, a suscipit ipsum porta. Cras tristique lacinia justo a pulvinar. Sed a tellus et velit sollicitudin iaculis non non felis. " />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                app:contentPadding="@dimen/dimen_16dp"
+                app:cardBackgroundColor="@color/colorBlack70"
+                app:layout_constraintTop_toBottomOf="@id/btnExpand">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvLabelGenre"
+                        android:text="@string/label_genre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        style="@style/MangaKyuTextStyle.Bold.Header3"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvGenre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_8dp"
+                        tools:listitem="@layout/item_genre_grid"
+                        app:layout_constraintTop_toBottomOf="@id/tvLabelGenre"/>
+
+                    <TextView
+                        android:id="@+id/tvLabelCompleteInfo"
+                        android:text="@string/label_complete_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_16sp"
+                        style="@style/MangaKyuTextStyle.Bold.Header3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rvGenre"/>
+
+                    <TextView
+                        android:id="@+id/tvLabelTitle"
+                        android:text="@string/label_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvLabelCompleteInfo"
+                        style="@style/MangaKyuTextStyle.Body3.LightGrey30"/>
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        tools:text="Overlord"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_4dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvLabelTitle"
+                        style="@style/MangaKyuTextStyle.SemiBold.Body2"/>
+
+                    <TextView
+                        android:id="@+id/tvLabelAuthor"
+                        android:text="@string/label_author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                        style="@style/MangaKyuTextStyle.Body3.LightGrey30"/>
+
+                    <TextView
+                        android:id="@+id/tvAuthor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_4dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvLabelAuthor"
+                        tools:text="Maruyama Kugane"
+                        style="@style/MangaKyuTextStyle.SemiBold.Body2"/>
+
+                    <TextView
+                        android:id="@+id/tvLabelChapter"
+                        android:text="@string/label_chapter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvAuthor"
+                        style="@style/MangaKyuTextStyle.Body3.LightGrey30"/>
+
+                    <TextView
+                        android:id="@+id/tvChapter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_4dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvLabelChapter"
+                        tools:text="50"
+                        style="@style/MangaKyuTextStyle.SemiBold.Body2"/>
+
+                    <TextView
+                        android:id="@+id/tvLabelVolume"
+                        android:text="@string/label_volume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_8dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvChapter"
+                        style="@style/MangaKyuTextStyle.Body3.LightGrey30"/>
+
+                    <TextView
+                        android:id="@+id/tvVolume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_4dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvLabelVolume"
+                        tools:text="3"
+                        style="@style/MangaKyuTextStyle.SemiBold.Body2"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/footerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReadNow"
+            android:text="@string/action_read_now"
+            app:backgroundTint="@color/colorLightBlue70"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
